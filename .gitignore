@@ -40,3 +40,10 @@ runs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Documentation (Local Only)
+CRADLEMETRICS.md
+INSTALLATION.md
+QUICKSTART.md
+RUN_GUIDE.md
+version 3.md
