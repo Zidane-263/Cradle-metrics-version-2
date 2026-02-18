@@ -48,6 +48,20 @@ Measurements are compared against **INTERGROWTH-21st** global standards to deter
 
 ---
 
+## 📂 Dataset & Training Data
+
+CradleMetrics is trained on the **Zidane Video Annotation Dataset (v1.0)**, a high-fidelity repository of annotated fetal ultrasounds.
+
+- **Coverage**: 39 multi-view video streams encompassing longitudinal and transverse planes.
+- **Anatomical Focus**:
+  - **Head**: Bi-parietal Diameter (BPD) and Head Circumference (HC) planes.
+  - **Abdomen**: Abdominal Circumference (AC) and abdominal organ visualization.
+  - **Extremities**: Femur Length (FL), arms, and legs.
+- **Diversity**: Multi-pose coverage including varying orientations (Horizontal/Vertical) and anatomical presentations (Head-down, Head-up).
+- **Annotations**: Pixel-level segmentation masks and verified bounding box metadata in standard XML formats.
+
+---
+
 ## ⚡ Quick Start
 
 ### 1. Installation
