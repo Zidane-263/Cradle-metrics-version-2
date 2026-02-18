@@ -50,7 +50,7 @@ Measurements are compared against **INTERGROWTH-21st** global standards to deter
 
 ## 📂 Dataset & Training Data
 
-CradleMetrics is trained on the **Zidane Video Annotation Dataset (v1.0)**, a high-fidelity repository of annotated fetal ultrasounds.
+CradleMetrics is trained on the **Video Annotation Dataset (v1.0)**, a high-fidelity repository of annotated fetal ultrasounds.
 
 - **Coverage**: 39 multi-view video streams encompassing longitudinal and transverse planes.
 - **Anatomical Focus**:
