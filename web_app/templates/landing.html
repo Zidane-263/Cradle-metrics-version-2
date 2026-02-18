@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CradleMetrics - Fetal Health Monitoring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <svg viewBox="0 0 100 100" class="logo-icon">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="3" />
+                        <path d="M 50 20 Q 35 35, 50 50 Q 65 35, 50 20" fill="currentColor" />
+                        <circle cx="50" cy="55" r="15" fill="currentColor" opacity="0.7" />
+                    </svg>
+                </div>
+                <h1 class="app-name">CradleMetrics</h1>
+            </div>
+
+            <p class="tagline">Fetal Health Monitoring & Biometric Analysis</p>
+
+            <p class="description">
+                Advanced AI-powered ultrasound analysis system achieving Dice coefficient of 0.912 and IoU of 0.857
+                for accurate fetal biometric measurements. Trained on 19,560 expert-annotated images with
+                INTERGROWTH-21st clinical standards integration.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="/analyze" class="btn btn-primary btn-large">
+                    <span class="btn-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v4"></path>
+                            <path d="M12 18v4"></path>
+                            <path d="M4.93 4.93l2.83 2.83"></path>
+                            <path d="M16.24 16.24l2.83 2.83"></path>
+                            <path d="M2 12h4"></path>
+                            <path d="M18 12h4"></path>
+                            <path d="M4.93 19.07l2.83-2.83"></path>
+                            <path d="M16.24 7.76l2.83-2.83"></path>
+                        </svg>
+                    </span>
+                    Start Analysis
+                </a>
+                <a href="#features" class="btn btn-secondary btn-large">
+                    <span class="btn-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </span>
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <!-- Cube 1: HC -->
+            <div class="floating-card card-1">
+                <div class="cube">
+                    <div class="cube-face front">
+                        <div class="metric-preview">
+                            <span class="metric-label">HC</span>
+                            <span class="metric-value">245mm</span>
+                            <span class="metric-status">✓ Normal</span>
+                        </div>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="metric-preview">
+                            <span class="metric-label">Head Circ.</span>
+                            <span class="metric-value">50th</span>
+                            <span class="metric-status">Percentile</span>
+                        </div>
+                    </div>
+                    <div class="cube-face right">
+                        <div class="metric-preview">
+                            <span class="metric-label">Growth</span>
+                            <span class="metric-value">AGA</span>
+                            <span class="metric-status">Normal</span>
+                        </div>
+                    </div>
+                    <div class="cube-face left">
+                        <div class="metric-preview">
+                            <span class="metric-label">Accuracy</span>
+                            <span class="metric-value">±1.8mm</span>
+                            <span class="metric-status">MAE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cube 2: AC -->
+            <div class="floating-card card-2">
+                <div class="cube">
+                    <div class="cube-face front">
+                        <div class="metric-preview">
+                            <span class="metric-label">AC</span>
+                            <span class="metric-value">289mm</span>
+                            <span class="metric-status">✓ 52nd %ile</span>
+                        </div>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="metric-preview">
+                            <span class="metric-label">Abdominal</span>
+                            <span class="metric-value">AGA</span>
+                            <span class="metric-status">Normal</span>
+                        </div>
+                    </div>
+                    <div class="cube-face right">
+                        <div class="metric-preview">
+                            <span class="metric-label">Status</span>
+                            <span class="metric-value">Healthy</span>
+                            <span class="metric-status">Growth</span>
+                        </div>
+                    </div>
+                    <div class="cube-face left">
+                        <div class="metric-preview">
+                            <span class="metric-label">Precision</span>
+                            <span class="metric-value">±2.1mm</span>
+                            <span class="metric-status">MAE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cube 3: GA -->
+            <div class="floating-card card-3">
+                <div class="cube">
+                    <div class="cube-face front">
+                        <div class="metric-preview">
+                            <span class="metric-label">GA</span>
+                            <span class="metric-value">28w</span>
+                            <span class="metric-status">✓ AGA</span>
+                        </div>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="metric-preview">
+                            <span class="metric-label">Gestational</span>
+                            <span class="metric-value">28.3w</span>
+                            <span class="metric-status">±0.5 weeks</span>
+                        </div>
+                    </div>
+                    <div class="cube-face right">
+                        <div class="metric-preview">
+                            <span class="metric-label">Trimester</span>
+                            <span class="metric-value">3rd</span>
+                            <span class="metric-status">Week 28</span>
+                        </div>
+                    </div>
+                    <div class="cube-face left">
+                        <div class="metric-preview">
+                            <span class="metric-label">Confidence</span>
+                            <span class="metric-value">98%</span>
+                            <span class="metric-status">High</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Comprehensive Fetal Analysis</h2>
+            <p class="section-subtitle">Powered by cutting-edge AI and medical standards</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gradient1)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                            <defs>
+                                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Automatic Detection</h3>
+                    <p>Hybrid transformer architecture with deformable self-attention mechanisms achieving 91.2% Dice
+                        coefficient for precise fetal anatomical structure identification</p>
+                    <div class="feature-stats">
+                        <span class="stat">Dice: 0.912</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gradient2)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                            <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                            <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                            <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                            <path d="M7 12h10"></path>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Precise Segmentation</h3>
+                    <p>Advanced boundary-guided modules with adaptive spatial sampling for medical-grade anatomical
+                        delineation (IoU: 0.857, HD95 < 4mm)</p>
+                            <div class="feature-stats">
+                                <span class="stat">Clinical-grade</span>
+                            </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gradient3)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            <defs>
+                                <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Biometric Extraction</h3>
+                    <p>Sub-millimeter precision measurements with MAE of 1.8mm for HC, 2.1mm for AC, and 2.5mm for limb
+                        length—within clinical tolerances</p>
+                    <div class="feature-stats">
+                        <span class="stat">MAE < 2.5mm</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gradient4)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                            <path d="M9 12l2 2 4-4"></path>
+                            <line x1="9" y1="17" x2="15" y2="17"></line>
+                            <defs>
+                                <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Clinical Assessment</h3>
+                    <p>INTERGROWTH-21st international standards for percentile calculation, growth classification, and
+                        anomaly detection (IUGR, microcephaly)</p>
+                    <div class="feature-stats">
+                        <span class="stat">WHO Standards</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gradient5)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            <defs>
+                                <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Real-time Processing</h3>
+                    <p>GPU-accelerated inference pipeline with 0.28s per frame processing time, enabling near real-time
+                        clinical deployment</p>
+                    <div class="feature-stats">
+                        <span class="stat">0.28s/frame</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#gradient6)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                            </path>
+                            <line x1="12" y1="11" x2="12" y2="17"></line>
+                            <line x1="9" y1="14" x2="15" y2="14"></line>
+                            <defs>
+                                <linearGradient id="gradient6" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Batch Processing</h3>
+                    <p>High-throughput analysis engine for processing multiple scans with comprehensive reporting and
+                        clinician feedback integration</p>
+                    <div class="feature-stats">
+                        <span class="stat">CSV Export</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="metrics-section" style="padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2rem; margin-bottom: 10px;">Comprehensive Fetal Analysis</h2>
+            <p class="section-subtitle" style="margin-bottom: 50px; font-size: 1.1rem; opacity: 0.8;">Clinical biometric
+                extraction standards for professional assessment</p>
+
+            <div class="metrics-showcase">
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gradientHC)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="5"></circle>
+                            <path d="M12 13v8"></path>
+                            <path d="M8 21h8"></path>
+                            <defs>
+                                <linearGradient id="gradientHC" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>HC</h3>
+                    <p>Head Circumference</p>
+                    <span class="metric-range">Automated Measurement</span>
+                </div>
+
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gradientAC)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="12" rx="8" ry="6"></ellipse>
+                            <path d="M12 6v12"></path>
+                            <defs>
+                                <linearGradient id="gradientAC" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>AC</h3>
+                    <p>Abdominal Circumference</p>
+                    <span class="metric-range">Ellipse Fitting</span>
+                </div>
+
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gradientBPD)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <defs>
+                                <linearGradient id="gradientBPD" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>BPD</h3>
+                    <p>Biparietal Diameter</p>
+                    <span class="metric-range">Precise Delineation</span>
+                </div>
+
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gradientFL)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 3v18"></path>
+                            <path d="M7 8l10-5"></path>
+                            <path d="M7 16l10 5"></path>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <defs>
+                                <linearGradient id="gradientFL" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>FL</h3>
+                    <p>Femur Length</p>
+                    <span class="metric-range">Skeletonization</span>
+                </div>
+            </div>
+
+            <!-- Advanced Features Section -->
+            <div style="margin-top: 100px;">
+                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 15px;">Advanced Clinical Intelligence
+                </h2>
+                <p class="section-subtitle" style="margin-bottom: 50px; font-size: 1.1rem; opacity: 0.8;">Deep
+                    learning-powered diagnostic acceleration and precision biometry</p>
+
+                <div class="advanced-features-grid">
+                    <div class="advanced-feature-card">
+                        <div style="margin-bottom: 25px;">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="url(#gradientGrowth)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                <defs>
+                                    <linearGradient id="gradientGrowth" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3 style="margin-bottom: 15px; color: var(--text-pure);">Growth Tracking</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">Automated
+                            generation of fetal growth trajectories with percentile curves mapped against
+                            INTERGROWTH-21st global standards.</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto;">
+                            <span
+                                style="font-size: 0.75rem; color: var(--primary); background: rgba(99,102,241,0.1); padding: 5px 12px; border-radius: 20px; font-weight: 600;">✓
+                                Longitudinal Analysis</span>
+                            <span
+                                style="font-size: 0.75rem; color: var(--primary); background: rgba(99,102,241,0.1); padding: 5px 12px; border-radius: 20px; font-weight: 600;">✓
+                                Trend Projection</span>
+                        </div>
+                    </div>
+
+                    <div class="advanced-feature-card">
+                        <div style="margin-bottom: 25px;">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="url(#gradientGA)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                <defs>
+                                    <linearGradient id="gradientGA" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3 style="margin-bottom: 15px; color: var(--text-pure);">GA Estimation</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">Consensus-based
+                            gestational age calculation utilizing multi-parameter biometric fusion with Bayesian
+                            uncertainty quantification.</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto;">
+                            <span
+                                style="font-size: 0.75rem; color: var(--primary); background: rgba(99,102,241,0.1); padding: 5px 12px; border-radius: 20px; font-weight: 600;">✓
+                                Multi-Param Fusion</span>
+                            <span
+                                style="font-size: 0.75rem; color: var(--primary); background: rgba(99,102,241,0.1); padding: 5px 12px; border-radius: 20px; font-weight: 600;">✓
+                                Error Bounds</span>
+                        </div>
+                    </div>
+
+                    <div class="advanced-feature-card">
+                        <div style="margin-bottom: 25px;">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="url(#gradientFlag)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                </path>
+                                <line x1="12" y1="9" x2="12" y2="13"></line>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                <defs>
+                                    <linearGradient id="gradientFlag" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3 style="margin-bottom: 15px; color: var(--text-pure);">Clinical Flagging</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">Real-time
+                            detection of high-risk biometry patterns, including microcephaly and IUGR markers, with
+                            automated clinical escalation flags.</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto;">
+                            <span
+                                style="font-size: 0.75rem; color: var(--secondary); background: rgba(236,72,153,0.1); padding: 5px 12px; border-radius: 20px; font-weight: 600;">✓
+                                Anomaly Screening</span>
+                            <span
+                                style="font-size: 0.75rem; color: var(--secondary); background: rgba(236,72,153,0.1); padding: 5px 12px; border-radius: 20px; font-weight: 600;">✓
+                                Risk Assessment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start?</h2>
+            <p>Upload your ultrasound image and get instant biometric analysis</p>
+            <a href="/analyze" class="btn btn-primary btn-large">
+                <span class="btn-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                </span>
+                Begin Analysis Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>CradleMetrics</h3>
+                    <p>Advanced Fetal Health Monitoring</p>
+                </div>
+                <div class="footer-tech">
+                    <p class="tech-stack">Powered by Advanced AI • Deep Learning • Clinical Standards</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CradleMetrics. Medical-grade AI for fetal health.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
